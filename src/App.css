@@ -4,12 +4,16 @@
   box-sizing: border-box;
 }
 
+/***************** HEADER *****************/
+
 header {
   background-color: chocolate;
   color: beige;
   text-align: center;
   padding: 20px 0;
 }
+
+/***************** CARDS *****************/
 
 div.card_container {
   padding: 20px;
@@ -22,7 +26,7 @@ div.action_container {
 }
 
 div.card {
-  background-color: rgb(233, 233, 233);
+  background-color: rgb(242, 242, 242);
   padding: 20px;
   margin-bottom: 20px;
   border-radius: 25px;
@@ -37,10 +41,54 @@ div.card ul {
   margin: 10px 0 10px 30px;
 }
 
+/***************** BUTTONS *****************/
+
 button.btn {
   border: none;
   background-color: chocolate;
   padding: 10px 15px;
   border-radius: 25px;
   color: white;
+}
+
+/***************** FORM *******************/
+
+div.form_container input,
+div.form_container label,
+div.form_container select {
+  display: block;
+}
+
+div.form_container input[type='text'],
+div.form_container input[type='number'],
+div.form_container select {
+  border: none;
+  border-bottom: 1px solid lightblue;
+  width: 100%;
+  margin: 10px 0;
+  padding: 5px 0;
+}
+
+div.form_container {
+  padding: 10px 20px;
+  margin-top: 20px;
+}
+
+div.checkbox_container {
+  display: flex;
+  gap: 10px;
+  padding: 10px 0;
+}
+
+/***************** SEARCH *****************/
+
+div.search_container {
+  padding: 20px 20px 0 20px;
+}
+
+div.search_container input[type="text"] {
+  border: none;
+  border-bottom: 1px solid lightblue;
+  width: 100%;
+  padding: 5px;
 }

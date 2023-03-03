@@ -36,10 +36,10 @@ function App() {
   }
 
   const handleDelete = (courseId) => {
-    console.log('Deleting ', courseId);
     const cleanCourses = [...courses].filter(elem => elem._id !== courseId)
     setCourses(cleanCourses);
   }
+
 
   return (
     <div className="app">
@@ -58,7 +58,7 @@ function App() {
       <div className="card_container">
         {courses.filter(elem => elem.title.toLowerCase().includes(searchValue.toLowerCase()) || elem.description.toLowerCase().includes(searchValue.toLowerCase()))
           .map(elem => {
-            return <Card key={elem._id} course={elem} handleDeleteCourse={handleDelete} />
+            return <Card key={elem._id} course={elem} handleDelete={handleDelete} />
           })}
       </div>
     </div>

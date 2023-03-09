@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 export default function Card({ course, handleDelete }) {
   const { image, title, description, price, hasDiscount, type, _id } = course;
@@ -17,7 +18,7 @@ export default function Card({ course, handleDelete }) {
         <li>{hasDiscount ? 'This course has discount' : 'No discounts available for this course'}</li>
         <li>Type of course: {type}</li>
       </ul>
-      <button className="btn">See more</button>
+      <button className="btn"><Link to={`/courses/${_id}`}>See more</Link></button>
       <button className="btn" style={{ marginLeft: '10px' }} onClick={handleDeleteCourse}>Delete</button>
     </div>
   )

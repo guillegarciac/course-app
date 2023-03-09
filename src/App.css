@@ -92,3 +92,24 @@ div.search_container input[type="text"] {
   width: 100%;
   padding: 5px;
 }
+
+ul.nav {
+  display: flex;
+  padding: 20px;
+  gap: 20px;
+}
+
+ul.nav {
+  list-style-type: none;
+}
+
+.nav_link {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: chocolate;
+}
+
+.active {
+  color: lightskyblue;
+  text-decoration: underline;
+}

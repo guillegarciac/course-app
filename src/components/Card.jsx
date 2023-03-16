@@ -20,6 +20,7 @@ export default function Card({ course, handleDelete }) {
       </ul>
       <button className="btn"><Link to={`/courses/${_id}`}>See more</Link></button>
       <button className="btn" style={{ marginLeft: '10px' }} onClick={handleDeleteCourse}>Delete</button>
+      <button className="btn" style={{ marginLeft: '10px' }}><Link to={`/edit/${_id}`}>Edit</Link></button>
     </div>
   )
 }

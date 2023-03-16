@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import Card from '../components/Card';
 import { courses } from '../data';
+import courseService from '../services/courseService';
 
 export default function CourseDetail() {
   const { courseId } = useParams();
@@ -11,17 +12,22 @@ export default function CourseDetail() {
 
   console.log(courseId)
 
-  useEffect(() => {
-    // eslint-disable-next-line
-    const currentCourse = courses.find(elem => elem._id == courseId);
-    if (currentCourse) {
+  const getCourse = async () => {
+    try {
+      const response = await courseService.getCourse(courseId);
       setLoading(false);
-      setCourse(currentCourse);
-    } else {
-      console.log(currentCourse)
+      setCourse(response);
+      setError(false);
+      console.log(response);
+    } catch (error) {
+      console.error(error)
       setLoading(false);
-      setError(true)
     }
+  }
+
+  useEffect(() => {
+    getCourse();
+    // eslint-disable-next-line
   }, [courseId])
 
   return (

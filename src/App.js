@@ -9,6 +9,7 @@ import ErrorPage from './views/ErrorPage';
 import Company from './components/Company';
 import Teachers from './components/Teachers';
 import CourseDetail from './views/CourseDetail';
+import EditCourse from './views/EditCourse';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/about/company" element={<Company />} />
         <Route path="/about/teachers" element={<Teachers />} /> */}
         <Route path="courses/:courseId" element={<CourseDetail />} />
+        <Route path="edit/:courseId" element={<EditCourse />} />
         <Route path="about" element={<About />}>
           <Route path="company" element={<Company />} />
           <Route path="teachers" element={<Teachers />} />

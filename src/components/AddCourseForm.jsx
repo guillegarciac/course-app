@@ -48,7 +48,7 @@ export default function AddCourseForm({ handleAddCourse }) {
         <input type="number" name="price" required value={newCourse.price} onChange={handleChange} />
         <div className="checkbox_container">
           <label>Does this course have discount?</label>
-          <input type="checkbox" name="hasDiscount" onChange={handleDiscount} />
+          <input type="checkbox" name="hasDiscount" checked={newCourse.hasDiscount} onChange={handleDiscount} />
         </div>
         <select name="type" value={newCourse.type} onChange={handleChange}>
           <option value="remote">Remote</option>
